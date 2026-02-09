@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-left">
+      <img src="profile.png" alt="Profile">
+    </div>
+    <div class="nav-middle">
+      <a href="#home">Home|</a>
+      <a href="#about">About Us|</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button onclick="openChat()">Chat Bot</button>
+    </div>
+  </nav>
+  
+<!-- main section-->
+  <div class="slider">
+    <div class="slides">
+      <div class="slide">
+        <img src="slide1.png" alt="Slide 1">
+        
+        <!--hide this part
+        <div class="overlay-text">
+          Fruits & Vegetables
+          <p>Instant Deliveries</p>
+        </div> -->
+      </div>
+      <div class="slide">
+        <img src="slide2.png" alt="Slide 2">
+        <div class="overlay-text">
+          Best Quality
+          <p>Fresh Everyday</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="slide3.png" alt="Slide 3">
+        <!--
+        <div class="overlay-text">
+          10% Discount
+          <p>On All Orders</p>
+        </div>
+        -->
+      </div>
+    </div>
+    <div class="navigation">
+      <button onclick="prevSlide()">❮</button>
+      <button onclick="nextSlide()">❯</button>
+    </div>
+  </div>
+  
+<!-- main section-->
+
+<!--purchase section-->
+<div class="section-container">
+<div class="scroll-grid">
+  <div class="item">
+    <img src="tomato.jpg" alt="Tomato" onclick="openModal('Tomato', 40)">
+    <p>Tomato</p>
+  </div>
+  <div class="item">
+    <img src="potato.jpg" alt="Potato" onclick="openModal('Potato', 30)">
+    <p>Potato</p>
+  </div>
+  <div class="item">
+    <img src="onion.jpg" alt="Onion" onclick="openModal('Onion', 25)">
+    <p>Onion</p>
+  </div>
+  <div class="item">
+    <img src="carrot.jpg" alt="Carrot" onclick="openModal('Carrot', 50)">
+    <p>Carrot</p>
+  </div>
+  <div class="item">
+    <img src="cabbage.jpg" alt="Cabbage" onclick="openModal('Cabbage', 35)">
+    <p>Cabbage</p>
+  </div>
+  <div class="item">
+    <img src="peas.jpg" alt="Peas" onclick="openModal('Peas', 60)">
+    <p>Peas</p>
+  </div>
+  <div class="item">
+    <img src="spinach.jpg" alt="Spinach" onclick="openModal('Spinach', 20)">
+    <p>Spinach</p>
+  </div>
+  <div class="item">
+    <img src="cauliflower.jpg" alt="Cauliflower" onclick="openModal('Cauliflower', 45)">
+    <p>Cauliflower</p>
+  </div>
+  <div class="item">
+    <img src="brinjal.jpg" alt="Brinjal" onclick="openModal('Brinjal', 30)">
+    <p>Brinjal</p>
+  </div>
+  <!-- Add unlimited more items -->
+</div>
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="vegName"></h2>
+    <p>Price per kg: ₹<span id="pricePerKg"></span></p>
+    <label>Enter quantity (kg): </label>
+    <input type="number" id="quantity" value="1" min="1" onchange="calculateTotal()">
+    <p>Total Price: ₹<span id="totalPrice"></span></p>
+    <button onclick="buyNow()">Buy Now</button>
+  </div>
+</div>
+<!--partner section stripper-->
+<div class="partner-strip">
+  <div class="logo-container">
+    <img src="partner1.png" alt="Partner 1">
+    <img src="partner2.png" alt="Partner 2">
+    <img src="partner3.png" alt="Partner 3">
+    <img src="partner4.png" alt="Partner 4">
+    <img src="partner5.png" alt="Partner 5">
+    <img src="partner6.png" alt="Partner 6">
+    <!-- Add unlimited logos -->
+  </div>
+</div>
+<!--footer-->
+
+<!-- Footer Section -->
+<footer class="footer">
+  <!-- Address -->
+  <div class="footer-info">
+    <h3>Vegetable Shop</h3>
+    <p>123 Market Road, Pandur, Maharashtra, India</p>
+    <p>Email: info@vegetableshop.com | Phone: +91 9111111111</p>
+  </div>
+
+  <!-- Google Map Embed -->
+  <div class="footer-map">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1941054.1732934806!2d73.8168818!3d18.1583192!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc00e37a23411e5%3A0x8a391c22203f8f0f!2sPandur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1770619706166!5m2!1sen!2sin"
+      width="100%" 
+      height="250" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- Credits -->
+  <div class="footer-credits">
+    <p>Website created by <strong>V.K</strong></p>
+  </div>
+
+  <!-- Social Media Links -->
+  <div class="footer-socials">
+    <a href="https://instagram.com" target="_blank">
+      <img src="instagram.jpeg" alt="Instagram">
+    </a>
+    <a href="https://facebook.com" target="_blank">
+      <img src="facebook.jpeg" alt="Facebook">
+    </a>
+    <a href="https://wa.me/9111111111" target="_blank">
+      <img src="whatsapp.jpeg" alt="WhatsApp">
+    </a>
+    <a href="https://twitter.com" target="_blank">
+      <img src="twitter.jpeg" alt="Twitter">
+    </a>
+  </div>
+</footer>
+
+
+
+  <!-- Project-->
+  
+  <script src="main.js"></script>
+  
+  
+</body>
+</html>
